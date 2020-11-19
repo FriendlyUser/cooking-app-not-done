@@ -4,6 +4,9 @@ on:
     branches:
       - main
 
+env:
+  CI: false
+
 jobs:
   build:
     name: Build
@@ -13,10 +16,14 @@ jobs:
         uses: actions/checkout@master
       - name: cd to app
         run: cd app
-      - name: Install Dependencies
-        run:  cd app && npm install
+      - name: Allow Scripts
+        run:  cd app && chmod +x ./continuous_deployment/before_install.sh ./continuous_deployment/build.sh ./continuous_deployment/deploy.sh
+      - name: Before Install
+        run:  cd app && ./continuous_deployment/before_install.sh
+      - name: Install
+        run:  cd app && npm test
       - name: Build
-        run:  cd app && npm run build
+        run:  cd app && ./continuous_deployment/build.sh
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
