@@ -19,11 +19,11 @@ jobs:
       - name: Allow Scripts
         run:  cd app && chmod +x ./continuous_deployment/before_install.sh ./continuous_deployment/build.sh ./continuous_deployment/deploy.sh
       - name: Before Install
-        run:  cd app && ./continuous_deployment/before_install.sh
+        run:  cd app && npm install
       - name: Install
         run:  cd app && npm test
       - name: Build
-        run:  cd app && ./continuous_deployment/build.sh
+        run:  cd app && npm run build
       - name: Archive Production Artifact
         uses: actions/upload-artifact@master
         with:
