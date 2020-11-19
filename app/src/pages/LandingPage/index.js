@@ -80,7 +80,7 @@ const LandingPage = () => {
             }
           />
 
-          <title>React Most Wanted</title>
+          <title>Cooking app</title>
         </Helmet>
         <Scrollbars
           ref={(e) => {
@@ -115,10 +115,11 @@ const LandingPage = () => {
                 }}
               >
                 <img
-                  src={'/rmw.svg'}
+                  src={'/cooking-svgrepo-com.svg'}
                   alt="logo"
                   style={{
                     height: 35,
+                    filter: "invert(26%) sepia(87%) saturate(5814%) hue-rotate(265deg) brightness(91%) contrast(98%)",
                     justifySelf: 'center',
                     color: 'white',
                     marginLeft: 12,
@@ -136,7 +137,7 @@ const LandingPage = () => {
               style={{
                 height: '100vh',
                 width: '100%',
-                backgroundImage: 'url(background.webp)',
+                backgroundImage: 'url(landing.jpg)',
                 backgroundRepeat: 'no-repeat',
                 backgroundAttachment: 'fixed',
                 backgroundSize: 'cover',
@@ -154,9 +155,11 @@ const LandingPage = () => {
                 }}
               >
                 <img
-                  src={'/rmw.svg'}
+                  src={'/cooking-svgrepo-com.svg'}
                   alt="logo"
-                  style={{ height: 150, maxWidth: 280, justifySelf: 'center' }}
+                  style={{ height: 150, maxWidth: 280, justifySelf: 'center',
+                    filter: "invert(26%) sepia(87%) saturate(5814%) hue-rotate(265deg) brightness(91%) contrast(98%)"
+                   }}
                 />
 
                 <div style={{ padding: 8 }}>
@@ -168,7 +171,7 @@ const LandingPage = () => {
                       fontSize: 50,
                     }}
                   >
-                    REACT MOST WANTED
+                    Cooking App
                   </h3>
 
                   <h4
@@ -179,7 +182,7 @@ const LandingPage = () => {
                       marginTop: -40,
                     }}
                   >
-                    React Starter-Kit with all Most Wanted features
+                    Simple Cooking App with lots of recipes.
                   </h4>
                 </div>
               </div>
@@ -225,7 +228,7 @@ const LandingPage = () => {
                       history.push('/dashboard')
                     }}
                   >
-                    Start
+                    Search
                   </Button>
                 </div>
                 <div style={{ display: scrolled ? undefined : 'none' }}>

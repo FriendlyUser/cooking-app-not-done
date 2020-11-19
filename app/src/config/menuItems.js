@@ -81,6 +81,7 @@ const getMenuItems = (props) => {
     localStorage.clear()
   }
 
+  // TODO updating 
   if (isAuthMenuOpen) {
     return [
       {

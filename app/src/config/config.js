@@ -9,17 +9,21 @@ import Loading from 'material-ui-shell/lib/components/Loading/Loading'
 import getDefaultRoutes from './getDefaultRoutes'
 import { defaultUserData, isGranted } from 'rmw-shell/lib/utils/auth'
 
+// google api key disabled
+// prod and dev are the same,
+// this is a simple app for personal learning
 const config = {
   firebase: {
     prod: {
       initConfig: {
-        apiKey: 'AIzaSyBQAmNJ2DbRyw8PqdmNWlePYtMP0hUcjpY',
-        authDomain: 'react-most-wanted-3b1b2.firebaseapp.com',
-        databaseURL: 'https://react-most-wanted-3b1b2.firebaseio.com',
-        projectId: 'react-most-wanted-3b1b2',
-        storageBucket: 'react-most-wanted-3b1b2.appspot.com',
-        messagingSenderId: '258373383650',
-        appId: '1:258373383650:web:b49ad5dd28da999a',
+        apiKey: "AIzaSyBUB4oTsYYS_3YxNAzKGsnfz2dLHgVZDFE",
+        authDomain: "cooking-app-dli.firebaseapp.com",
+        databaseURL: "https://cooking-app-dli.firebaseio.com",
+        projectId: "cooking-app-dli",
+        storageBucket: "cooking-app-dli.appspot.com",
+        messagingSenderId: "918741427146",
+        appId: "1:918741427146:web:99b55048968b10f5006533",
+        measurementId: "G-L36L58D0H2"
       },
       messaging: {
         publicVapidKey:
@@ -28,13 +32,14 @@ const config = {
     },
     dev: {
       initConfig: {
-        apiKey: 'AIzaSyB31cMH9nJnERC1WCWA7lQHnY08voLs-Z0',
-        authDomain: 'react-most-wanted-dev.firebaseapp.com',
-        databaseURL: 'https://react-most-wanted-dev.firebaseio.com',
-        projectId: 'react-most-wanted-dev',
-        storageBucket: 'react-most-wanted-dev.appspot.com',
-        messagingSenderId: '70650394824',
-        appId: '1:70650394824:web:7cd3113c37741efc',
+        apiKey: "AIzaSyBUB4oTsYYS_3YxNAzKGsnfz2dLHgVZDFE",
+        authDomain: "cooking-app-dli.firebaseapp.com",
+        databaseURL: "https://cooking-app-dli.firebaseio.com",
+        projectId: "cooking-app-dli",
+        storageBucket: "cooking-app-dli.appspot.com",
+        messagingSenderId: "918741427146",
+        appId: "1:918741427146:web:99b55048968b10f5006533",
+        measurementId: "G-L36L58D0H2"
       },
       messaging: {
         publicVapidKey:
@@ -44,8 +49,6 @@ const config = {
     firebaseuiProps: {
       signInOptions: [
         'google.com',
-        'facebook.com',
-        'twitter.com',
         'github.com',
         'password',
         'phone',
